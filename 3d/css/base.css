@@ -1,0 +1,63 @@
+h1,h2,h3,h4,h5,h6,p,dd{margin:0;}
+ul,ol,dl{margin:0;padding:0;list-style:none;}
+img{border:none;vertical-align:middle;}
+a{text-decoration:none;color:#000;color:inherit;outline:none;}
+body{font:14px/1.5 'Microsoft Yahei',sans-serif;/*sans-serif 是手机默认字体*/}
+
+/**************************************************
+=========== border ===============================
+**************************************************/
+.bor{border:1px solid #eee;}
+.bor-t{border-top:1px solid #eee;}
+.bor-r{border-right:1px solid #eee;}
+.bor-b{border-bottom:1px solid #eee;}
+.bor-l{border-left:1px solid #eee;}
+
+/******* float *******/
+.clearfix:after{
+	content: '';
+	display: block;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+	clear: both;
+}
+.fl-l{float:left;}
+.fl-r{float:right;}
+
+/*************************************
+===============position===============
+***********************************/
+.pos-r{position:relative;}
+.pos-a{position:absolute;}
+.pos-f{position:fixed;}
+
+.t{top: 0;}
+.r{right: 0;}
+.b{bottom:0;}
+.l{left: 0;}
+
+.zindex-9 {z-index:9;}
+.zindex-99 {z-index:99;}
+.zindex-999 {z-index:999;}
+.zindex-9999 {z-index:9999;}
+.zindex-99999 {z-index:99999;}
+.zindex-999999 {z-index:999999;}
+/****************************
+	========= text =========
+*****************************/
+/*** display ***/
+.dis-b {display:block;}
+.dis-ib {display:inline-block;}
+.dis-n {display:none;}
+/*** text-align ***/
+.t-a-l {text-align:left;}
+.t-a-c {text-align:center;}
+.t-a-r {text-align:right;}
+/*** vertical ***/
+.ver-a-m{vertical-align:middle;}
+/*** overflow ***/
+.overf-h{overflow:hidden;}
+
+
+

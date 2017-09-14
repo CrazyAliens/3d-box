@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Author" content="稀饭菌" />
+    <meta name="Copyright" content="网站版权" />
+    <meta name="keywords" content="网站关键字" />
+    <meta name="description" content="CrazyAliens" />
+    <title>3d盒子</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <style>
+        @keyframes big-up {
+            50%{
+                transform: rotateX(180deg) translateZ(200px);
+                transform-origin: top;
+            }
+        }
+        @keyframes big{
+            50%{transform:rotateY(360deg)}
+        }
+        @keyframes small-up {
+            50%{
+                transform: rotateX(180deg) translateZ(100px);
+                transform-origin: top;
+            }
+        }
+        @keyframes small{
+            50%{
+                transform: rotateY(360deg) translateY(-400px);
+            }
+        }
+        .beijing{
+            position: relative;
+            perspective: 1200px;
+        }
+        .big-box{
+            position:absolute;
+            width: 400px;
+            height: 400px;
+            margin: 400px;
+            animation:big 7s infinite;
+            transform-style: preserve-3d;
+        }
+        .Small-box{
+            position:absolute;
+            top: 100px;
+            left: 100px;
+            width: 200px;
+            height: 200px;
+            margin: 400px;
+            animation:small 7s infinite;
+            transform-style: preserve-3d;
+        }
+        .big-box>div{
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            top: 0;
+            left: 0;
+            transform-style: preserve-3d;
+            font: 30px/200px "";
+            text-align: center;
+            border: 1px solid crimson;
+        }
+        .Small-box>div{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 0;
+            left: 0;
+            transform-style: preserve-3d;
+            font: 30px/200px "";
+            text-align: center;
+            border: 1px solid crimson;
+        }
+        .big-box .up{
+            transform:rotateX(90deg) translateZ(200px);
+            animation: big-up 7s infinite;
+        }
+        /*大盒子的块*/
+        .big-box .down{
+            transform:rotateX(-90deg) translateZ(200px);
+        }
+        .big-box .left{
+            transform:rotateY(-90deg) translateZ(200px);
+        }
+        .big-box .right{
+            transform:rotateY(90deg) translateZ(200px);
+        }
+        .big-box .before {
+            transform: translateZ(200px);
+        }
+        .big-box .after{
+            transform: translateZ(-200px);
+        }
+        /*小盒子的块*/
+        .Small-box .up{
+            transform:rotateX(90deg) translateZ(100px);
+            animation:small-up 7s infinite;
+        }
+        .Small-box .down{
+            transform:rotateX(-90deg) translateZ(100px);
+        }
+        .Small-box .left{
+            transform:rotateY(-90deg) translateZ(100px);
+        }
+        .Small-box .right{
+            transform:rotateY(90deg) translateZ(100px);
+        }
+        .Small-box .before {
+            transform: translateZ(100px);
+        }
+        .Small-box .after{
+            transform: translateZ(-100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="beijing">
+        <div class="big-box">
+            <div class="up">上</div>
+            <div class="down">下</div>
+            <div class="left">左</div>
+            <div class="right">右</div>
+            <div class="before">前</div>
+            <div class="after">后</div>
+        </div>
+        <div class="Small-box">
+            <div class="up">上</div>
+            <div class="down">下</div>
+            <div class="left">左</div>
+            <div class="right">右</div>
+            <div class="before">前</div>
+            <div class="after">后</div>
+        </div>
+    </div>
+</body>
+</html>
